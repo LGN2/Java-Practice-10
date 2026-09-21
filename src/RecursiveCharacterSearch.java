@@ -13,6 +13,7 @@ public class RecursiveCharacterSearch {
     }
 
     public static boolean contains(String text, char target) {
+        if (text.isEmpty()) return false;
         return false;
     }
 }
