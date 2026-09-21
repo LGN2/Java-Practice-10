@@ -10,6 +10,7 @@ public class ReverseStringPrinter {
     }
 
     public static void printReverse(String text) {
-        System.out.println("Recursive printing is not implemented yet.");
+        if (text.isEmpty()) return;
+        System.out.println("Recursive step will be added next.");
     }
 }
