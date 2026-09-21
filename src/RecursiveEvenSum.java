@@ -2,7 +2,15 @@ import java.util.Scanner;
 
 public class RecursiveEvenSum {
     public static void main(String[] args) {
-        System.out.println("Task 389 class structure is ready.");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a positive integer: ");
+        if (!scanner.hasNextInt()) System.out.println("Invalid input. Please enter an integer.");
+        else {
+            int number = scanner.nextInt();
+            if (number < 1) System.out.println("Please enter a number greater than zero.");
+            else System.out.println("Sum of even numbers: " + sumEven(number));
+        }
+        scanner.close();
     }
 
     public static int sumEven(int number) {
