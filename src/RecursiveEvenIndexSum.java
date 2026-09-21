@@ -9,6 +9,7 @@ public class RecursiveEvenIndexSum {
     }
 
     public static int sumEvenIndex(int[] numbers, int index) {
+        if (index >= numbers.length) return 0;
         return 0;
     }
 
