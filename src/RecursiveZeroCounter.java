@@ -14,6 +14,7 @@ public class RecursiveZeroCounter {
     }
 
     public static int countZeros(long number) {
+        if (number == 0) return 1;
         return 0;
     }
 
