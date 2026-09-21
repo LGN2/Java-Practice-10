@@ -11,6 +11,7 @@ public class ReverseStringPrinter {
 
     public static void printReverse(String text) {
         if (text.isEmpty()) return;
-        System.out.println("Recursive step will be added next.");
+        printReverse(text.substring(1));
+        System.out.println(text.charAt(0));
     }
 }
