@@ -14,6 +14,7 @@ public class RecursiveCharacterSearch {
 
     public static boolean contains(String text, char target) {
         if (text.isEmpty()) return false;
-        return false;
+        if (text.charAt(0) == target) return true;
+        return contains(text.substring(1), target);
     }
 }
