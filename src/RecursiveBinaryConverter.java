@@ -15,6 +15,6 @@ public class RecursiveBinaryConverter {
 
     public static String toBinary(long number) {
         if (number < 2) return String.valueOf(number);
-        return "";
+        return toBinary(number / 2) + number % 2;
     }
 }
