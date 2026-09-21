@@ -2,7 +2,11 @@ import java.util.Scanner;
 
 public class RecursiveUppercaseCounter {
     public static void main(String[] args) {
-        System.out.println("Task 398 class structure is ready.");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String text = scanner.nextLine();
+        System.out.println("Uppercase letters: " + countUpper(text));
+        scanner.close();
     }
 
     public static int countUpper(String text) {
