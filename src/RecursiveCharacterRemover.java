@@ -14,6 +14,8 @@ public class RecursiveCharacterRemover {
 
     public static String removeChar(String text, char target) {
         if (text.isEmpty()) return "";
-        return text;
+        String remainingText = removeChar(text.substring(1), target);
+        if (text.charAt(0) == target) return remainingText;
+        return text.charAt(0) + remainingText;
     }
 }
