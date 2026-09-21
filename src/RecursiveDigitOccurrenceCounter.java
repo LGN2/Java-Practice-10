@@ -2,7 +2,22 @@ import java.util.Scanner;
 
 public class RecursiveDigitOccurrenceCounter {
     public static void main(String[] args) {
-        System.out.println("Task 390 class structure is ready.");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a non-negative integer: ");
+        if (!scanner.hasNextLong()) {
+            System.out.println("Invalid number.");
+            scanner.close();
+            return;
+        }
+        long number = scanner.nextLong();
+        System.out.print("Enter a digit from 0 to 9: ");
+        if (!scanner.hasNextInt()) System.out.println("Invalid digit.");
+        else {
+            int digit = scanner.nextInt();
+            if (number < 0 || digit < 0 || digit > 9) System.out.println("Number and digit must be non-negative, and digit must be 0-9.");
+            else System.out.println("Occurrences: " + countDigit(number, digit));
+        }
+        scanner.close();
     }
 
     public static int countDigit(long number, int digit) {
