@@ -22,6 +22,8 @@ public class FastRecursivePower {
 
     public static long power(long base, int exponent) {
         if (exponent == 0) return 1;
-        return 0;
+        long halfPower = power(base, exponent / 2);
+        if (exponent % 2 == 0) return halfPower * halfPower;
+        return base * halfPower * halfPower;
     }
 }
