@@ -2,7 +2,11 @@ import java.util.Scanner;
 
 public class ReverseStringPrinter {
     public static void main(String[] args) {
-        System.out.println("Task 388 class structure is ready.");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String text = scanner.nextLine();
+        printReverse(text);
+        scanner.close();
     }
 
     public static void printReverse(String text) {
