@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class RecursiveEvenIndexSum {
     public static void main(String[] args) {
-        System.out.println("Task 396 class structure is ready.");
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = readArray(scanner);
+        if (numbers != null) System.out.println("Even-index sum: " + sumEvenIndex(numbers, 0));
+        scanner.close();
     }
 
     public static int sumEvenIndex(int[] numbers, int index) {
