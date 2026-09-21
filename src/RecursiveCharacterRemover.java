@@ -13,6 +13,7 @@ public class RecursiveCharacterRemover {
     }
 
     public static String removeChar(String text, char target) {
+        if (text.isEmpty()) return "";
         return text;
     }
 }
