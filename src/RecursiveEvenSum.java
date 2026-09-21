@@ -15,6 +15,7 @@ public class RecursiveEvenSum {
 
     public static int sumEven(int number) {
         if (number <= 0) return 0;
-        return 0;
+        int currentValue = number % 2 == 0 ? number : 0;
+        return currentValue + sumEven(number - 1);
     }
 }
