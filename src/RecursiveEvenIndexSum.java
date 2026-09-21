@@ -10,7 +10,7 @@ public class RecursiveEvenIndexSum {
 
     public static int sumEvenIndex(int[] numbers, int index) {
         if (index >= numbers.length) return 0;
-        return 0;
+        return numbers[index] + sumEvenIndex(numbers, index + 2);
     }
 
     private static int[] readArray(Scanner scanner) {
