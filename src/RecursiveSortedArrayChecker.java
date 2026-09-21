@@ -10,7 +10,8 @@ public class RecursiveSortedArrayChecker {
 
     public static boolean isSorted(int[] numbers, int index) {
         if (numbers.length < 2 || index >= numbers.length - 1) return true;
-        return false;
+        if (numbers[index] > numbers[index + 1]) return false;
+        return isSorted(numbers, index + 1);
     }
 
     private static int[] readArray(Scanner scanner) {
