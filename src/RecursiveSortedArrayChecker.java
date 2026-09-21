@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class RecursiveSortedArrayChecker {
     public static void main(String[] args) {
-        System.out.println("Task 391 class structure is ready.");
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = readArray(scanner);
+        if (numbers != null) System.out.println("Array is sorted: " + isSorted(numbers, 0));
+        scanner.close();
     }
 
     public static boolean isSorted(int[] numbers, int index) {
