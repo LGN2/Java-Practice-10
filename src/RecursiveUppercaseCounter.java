@@ -10,6 +10,7 @@ public class RecursiveUppercaseCounter {
     }
 
     public static int countUpper(String text) {
+        if (text.isEmpty()) return 0;
         return 0;
     }
 }
