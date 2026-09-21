@@ -11,6 +11,7 @@ public class RecursiveUppercaseCounter {
 
     public static int countUpper(String text) {
         if (text.isEmpty()) return 0;
-        return 0;
+        int currentUppercase = Character.isUpperCase(text.charAt(0)) ? 1 : 0;
+        return currentUppercase + countUpper(text.substring(1));
     }
 }
