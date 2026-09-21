@@ -21,6 +21,7 @@ public class FastRecursivePower {
     }
 
     public static long power(long base, int exponent) {
+        if (exponent == 0) return 1;
         return 0;
     }
 }
