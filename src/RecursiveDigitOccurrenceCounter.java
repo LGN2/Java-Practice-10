@@ -22,7 +22,7 @@ public class RecursiveDigitOccurrenceCounter {
 
     public static int countDigit(long number, int digit) {
         if (number == 0) return digit == 0 ? 1 : 0;
-        return 0;
+        return countDigitRecursive(number, digit);
     }
 
     private static int countDigitRecursive(long number, int digit) {
